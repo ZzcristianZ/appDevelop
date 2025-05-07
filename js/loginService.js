@@ -8,6 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 function login(email, password) {
     let message= ''
     let alertType=''
+    
     const REQRES_ENDPOINT = 'https://reqres.in/api/login'
     fetch(REQRES_ENDPOINT,  {
         method: 'POST',
