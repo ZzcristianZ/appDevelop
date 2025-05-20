@@ -109,9 +109,9 @@ function getUser(idUser) {
                       </div>
                       <div class="modal-body">
                         <div class="card">
-                          <img src="${user.avatar}" class="card-img-top" alt="No se encontò el avatar">
+                          <img src="${user.avatar}" class="rounded-circle" style="width: 100px; height: 100px; object-fit: cover; display: block; margin: auto;" alt="No se encontró el avatar">
                           <div class="card-body">
-                          <h5> class= "card-title>Informacion del usuario</h5>
+                          <h5 class= "card-title">Informacion del usuario</h5>
                             <p class="card-text">Nombre: ${user.first_name}</p>
                             <p class="card-text">Apellido: ${user.last_name} </p>
                           </div>
