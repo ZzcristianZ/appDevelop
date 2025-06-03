@@ -49,7 +49,6 @@ function users(page) {
 
             list_user += `</tbody></table>`;
 
-            // Agregar la paginación nuevamente
             list_user += `
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
@@ -217,7 +216,6 @@ function saveUser() {
         document.getElementById('info').innerHTML =
           '<h3>✅ Se ha guardado el usuario correctamente.</h3>';
 
-        // Ocultar modal
         const modalId = document.getElementById('modalUser');
         const modal = bootstrap.Modal.getInstance(modalId);
         modal.hide();
@@ -235,7 +233,7 @@ function saveUser() {
     });
 
   } else {
-    form.reportValidity(); // <- typo corregido
+    form.reportValidity(); 
   }
 }
 
@@ -261,7 +259,6 @@ function deleteUser(idUser) {
             if (response.status === 204) {
                 alertBuilder('success', 'Usuario eliminado exitosamente');
 
-                // Eliminar la fila del usuario directamente en la tabla
                 const userRow = document.querySelector(`tr[data-user-id="${idUser}"]`);
                 if (userRow) userRow.remove();
             } else {
@@ -285,7 +282,7 @@ function alertBuilder(alertType, message) {
       
         const alert = `<div class="alert alert-${alertType} alert-dismissible fade show" role="alert">
             ${message}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">monda</button>
         </div>`;
         
         mensajeElement.innerHTML = alert;
